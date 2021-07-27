@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <section class="wrap">
+        <div class="main_area">
+            <div class="main_view_wrap">
+                <div class="logo">
+                    <h1>대림대학교</h1>
+                </div>
+                <div class="main_title">
+                    (예시) 재미로 알아보는 나에게 맞는 학과
+                </div>
+                <div class="sub_title">
+                    간단하고 빠르게 12개의 양자택일 문제로 알아보는<br> 나에게 맞는 최적의 학과 알아보기
+                </div>
+                <div class="main_img">
+                    (임시)학교 전경사진 이나 관련사진 들어가는 부분
+                </div>
+                <button class="start_btn" onclick="move(1)">
+                    <h1>시작하기</h1>
+                    <div class="btn_border border_top"></div>
+                    <div class="btn_border border_right"></div>
+                    <div class="btn_border border_bottom"></div>
+                    <div class="btn_border border_left"></div>
+                </button>
+                <div class="info_text"></div>
+            </div>
+    
+        </div>
+        <div class="question_area">
+            <div class="question_wrap">
+                <div class="question_num">Q. 1</div>
+                <div class="progress"> 1 / 12</div>
+                <div class="line"></div>
+                <div class="question">
+                    <h1>
+                        Lorem ipsum dolor sit amet.<br>Lorem ipsum dolor sit amet consectetur adipisicing.
+                    </h1>
+                </div>
+                <div class="answer1 answer" onclick="move(2)">문제에 대한 답변 첫번째 입니다 </div>
+                <div class="answer2 answer">문제에 대한 답변 두번째 입니다</div>
+                <div class="q_logo">대림대학교</div>
+            </div>  
+        </div>
+        <div class="loading_wrap"></div>
+        <div class="result area">
+            <div class="answer_wrap">
+                <div class="answer_header">
+                    <h1>(가칭) 재미로 알아보는 추천학과</h1>
+                </div>
+                <div class="show_img"> mbti 혹은 학과에 걸맞는 사진이 나타나는곳</div>
+                <div class="infomation_wrap">
+                    <div class="result_main_title">mbti 혹은 학과</div>
+                    <div class="result_sub_title">한줄설명or 키워드</div>
+                    <div class="choice">추천학과 1~3개?</div>
+                    <div class="result_text">
+                        <h2>학과별 간단 설명</h2>
+                        <h3>aaaa학과: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, aspernatur!
+                        </h3>
+                        <h3>bbbbb학과: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, aspernatur!
+                        </h3>
+                        <h3>ccc학과: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, aspernatur!
+                        </h3>
+                    </div>
+                    <div class="quick_department_wrap">
+                        <div class="quick1 quick_box">aaaa학과</div>
+                        <div class="quick2 quick_box">bbbbb학과</div>
+                        <div class="quick3 quick_box">ccc학과</div>
+                    </div>
+                    <div class="share">카톡/페북/인스타등등</div>
+                    <div class="return" onclick="move(3)">다시 테스트하기</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function move(check){
+            if(check==1){
+                $(".main_view_wrap").css({"display":"none"});
+                $(".question_wrap").css({"display":"grid"});
+            }
+            if(check==2){
+                $(".question_wrap").css({"display":"none"});
+                $(".answer_wrap").css({"display":"grid"});
+            }
+            if(check==3){
+                $(".answer_wrap").css({"display":"none"});
+                $(".main_view_wrap").css({"display":"flex"});
+            }   
+        }
+    </script>
+</body>
+</html>
