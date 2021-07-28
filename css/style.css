@@ -9,14 +9,7 @@ html{font-size: 10pt;}
 .main_title{font-size: 1.8rem; margin-bottom: 15px; text-align: center; font-weight: 700;}
 .sub_title{font-size: 1.1rem; text-align: center; color: skyblue;}
 .main_img{width: 80%; height: 300px; background-color: #fff; margin: 50px; 
-    background: 
-    /* radial-gradient(
-        rgba(255, 255, 255, 0) 10%,
-        rgba(255, 255, 255, 0.25) 40%,
-        rgba(255, 255, 255, 0.5) 60%,
-        rgba(255, 255, 255, 0.75) 90%,
-        rgba(255, 255, 255, 1) 100%), */
-        url("../img/cam_map.png") no-repeat center/200%; border-radius: 2rem; transition: all .2s;
+    background: url("../img/cam_map.png") no-repeat center/200%; border-radius: 2rem; transition: all .2s;
     border: 2px solid #fff; box-shadow: 0 0 5px 5px #b8ebff;}
 .main_img:hover{ background: url("../img/cam_map.png") no-repeat center/150%;}
 
