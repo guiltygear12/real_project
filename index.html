@@ -19,13 +19,13 @@
                     <h1>대림대학교</h1>
                 </div>
                 <div class="main_title">
-                    (예시) 재미로 알아보는 나에게 맞는 학과
+                    학창시절 되돌아보고 알아보는 내게 맞는 학과찾기
                 </div>
                 <div class="sub_title">
-                    간단하고 빠르게 12개의 양자택일 문제로 알아보는 나에게 맞는 최적의 학과 알아보기
+                    초,중,고등학교를 되돌아보면서 내 성격에는 어떤 학과가 맞는지 재미로 알아보자!
                 </div>
                 <div class="main_img">
-                    (임시)학교 전경사진 이나 관련사진 들어가는 부분
+                    
                 </div>
                 <button class="start_btn" onclick="move(1)">
                     <h1>시작하기</h1>
@@ -40,61 +40,75 @@
         </div>
         <div class="question_area">
             <div class="question_wrap">
-                <div class="question_num">Q. 1</div>
-                <div class="progress"> 1 / 12</div>
+                <div class="question_num"><h2 ID="num">Q.</h2></div>
+                <div class="progress"> <h2 id="progress">0/12</h2></div>
                 <div class="line"></div>
                 <div class="question">
-                    <h1>
-                        (예시)드디어 대학 첫날이다! <br>아직 강의실 자리가 많이 비어있는데 어디에 앉을까?
+                    <h1 ID="quest">
+                        문제가 출제되는 영역입니다<br>문제를 읽고
                     </h1>
                 </div>
-                <div class="answer1 answer" onclick="move(2)"><h4>수업을 들으려면 앞으로가야지</h4> </div>
-                <div class="answer2 answer" onclick="move(2)"><h3>앞자리는 부담스러워 편안하게 뒤로 가자</h3></div>
+                <div class="answer1 answer" onclick="next_question_A()"><h2 id="A">A / B 답변들 중에서 적당한 답변을</h2> </div>
+                <div class="answer2 answer" onclick="next_question_B()"><h2 id="B">골라주시면 되겠습니다!</h2></div>
                 <div class="q_logo">대림대학교</div>
             </div>  
         </div>
-        <div class="loading_wrap"></div>
         <div class="result area">
             <div class="answer_wrap">
                 <div class="answer_header">
-                    <h1>(가칭) 재미로 알아보는 나에게 맞는 학과</h1>
+                    학창시절 되돌아보고 알아보는 내게 맞는 학과찾기
                 </div>
-                <div class="show_img"> mbti 혹은 학과에 걸맞는 사진이 나타나는곳
+                <div class="show_img">
+                    <img src="./img/ISTP.png" alt="" class="result_background_img">
                 </div>
                 <div class="infomation_wrap">
                     <div class="result_main_title">
-                        <h1>컴퓨터 정보 학부</h1>
+                        <h1 id="my_mbti"> 성격유형 istp </h1>
                     </div>
                     <div class="result_sub_title">한줄설명or 키워드
                         <p>예시) 이성적으로 판단하는것을 선호한다 / 반복되는 일상을 싫어한다</p>
                     </div>
-                    <div class="choice">추천학과 1~3개?</div>
+                    <div class="choice">해당성격 유형에 적당한 직업추천 / 추천학과랑 관련된직업 리스트 + 학과랑은 상관없지만 성격유형에 적합한 직업 </div>
                     <div class="result_text">
-                        <h1>장/단점</h1>
-                        <div class="result_wrap">
-                            <div class="text_wrap text_left">
-                                <h1>장점</h1>
-                            <h3>2번 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, eaque!</h3>
-                            <h3>2번 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, eaque!</h3>
+                        <div class="recommend">
+                            <div class="quick_area" id="quick_1">1.스마트전자-통신학부</div>
+                            <div class="dep_info_area info_1">
+                                
                             </div>
-                            <div class="text_wrap text_right">
-                                <h3>단점</h3>
-                            <h3>1번Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, eaque!</h3>
-                            <h3>2번Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, eaque!</h3>
+                            
+                        </div>
+                        <div class="recommend">
+                            <div class="quick_area" id="quick_2">2.스마트전자-통신학부</div>
+                            <div class="dep_info_area info_2">
+                                <h3>"스마트전자-통신 첨단산업분야의 창의적 개발 인재 양성"</h3>
+                            <p>학과의 비전: "4차 산업혁명시대 스마트전자·통신 첨단산업분야의 창의적 개발 인재를 양성한다는 사명감과 자부심을
+                                갖고 있는 학부입니다."</p>
+                            <p>드론, 스마트폰, 자율주행차, 인공지능(AI) IoT 등 스마트전자 및 통신 특성화 교육</p>
+                            <p>진출분야: 전자관련기업 · 반도체 설계 및 설비 · LCD/OLDE 연구등...</p>
                             </div>
                         </div>
-                        
-                    </div>
-                    <div class="quick_department_wrap">
-                        <div class="quick_box_wrap">
-                            <button class="quick1 quick_box">aaaa학과</button>
-                            <button class="quick2 quick_box">bbbbb학과</button>
-                            <button class="quick3 quick_box">ccc학과</button>
+                        <div class="recommend">
+                            <div class="quick_area" id="quick_3">3.스마트전자-통신학부</div>
+                            <div class="dep_info_area info_3">
+                                <h3>"스마트전자-통신 첨단산업분야의 창의적 개발 인재 양성"</h3>
+                            <p>학과의 비전: "4차 산업혁명시대 스마트전자·통신 첨단산업분야의 창의적 개발 인재를 양성한다는 사명감과 자부심을
+                                갖고 있는 학부입니다."</p>
+                            <p>드론, 스마트폰, 자율주행차, 인공지능(AI) IoT 등 스마트전자 및 통신 특성화 교육</p>
+                            <p>진출분야: 전자관련기업 · 반도체 설계 및 설비 · LCD/OLDE 연구등...</p>
+                            </div>
                         </div>
-                        
                     </div>
-                    <div class="share">카톡/페북/인스타등등 결과 공유 하는 버튼 들어가는 영역</div>
-                    <div class="return" onclick="move(3)">다시 테스트하기 버튼 영역</div>
+                    <div class="share">
+                        <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+                        <div class="addthis_inline_share_toolbox_f4rg"></div>
+                    </div>
+                    <div class="return" onclick="window.location.reload()">
+                        <div class="return_border return_top"></div>
+                        <div class="return_border return_right"></div>
+                        <div class="return_border return_bottom"></div>
+                        <div class="return_border return_left"></div>
+                        <h1>테스트 다시하기</h1>
+                    </div>
                 </div>
             </div>
         </div>
@@ -115,6 +129,157 @@
                 $(".main_view_wrap").css({"display":"flex"});
             }   
         }
+        //문제영역
+        var EI_point=0;
+        var SN_point=0;
+        var TF_point=0;
+        var JP_point=0;
+        var num=1;
+        var check=0;
+        var mbti="";
+            function next_question_A(){
+                if(num==13){
+                    show_result();
+                    move(2);
+                };
+                if(check==0){
+                    EI_point=EI_point+1;
+                } else if(check==1){
+                    SN_point=SN_point+1;
+                } else if(check==2){
+                    TF_point=TF_point+1;
+                } else if(check==3){
+                    JP_point=JP_point+1;
+                }
+                $('#num').html("Q."+num);
+                $('#progress').html(num+"/12");
+                $('#quest').html(question[num]["quest"]);
+                $('#A').html(question[num]["A"]);
+                $('#B').html(question[num]["B"]);
+                num++;
+                check++;
+                if(check>3){
+                    check=0;
+                } 
+            }
+            function next_question_B(){
+                if(num==13){
+                    show_result();
+                    move(2);
+                }
+                $('#num').html("Q."+num);
+                $('#progress').html(num+"/12");
+                $('#quest').html(question[num]["quest"]);
+                $('#A').html(question[num]["A"]);
+                $('#B').html(question[num]["B"]);
+                num++;
+                check++;
+                if(check>3){
+                    check=0;
+                } 
+            }
+            function show_result(){
+                if(EI_point>2){
+                    mbti+="E";
+                } else{
+                    mbti+="I";
+                }
+                if(SN_point>2){
+                    mbti=mbti+"S"
+                } else{
+                    mbti=mbti+"N"
+                }
+                if(TF_point>2){
+                    mbti=mbti+"T"
+                } else{
+                    mbti=mbti+"F"
+                }
+                if(JP_point>2){
+                    mbti=mbti+"J"
+                } else{
+                    mbti=mbti+"P"
+                }    
+                
+                alert(mbti);
+                result_change(mbti);
+            }
+            function result_change(mbti){
+                //성격유형 표시하는부분
+                $('#my_mbti').html(mbti);
+                // 결과페이지 배경화면 부분
+                var mbti_img=mbti_data[mbti]["img"]
+                $(".result_background_img").attr("src",mbti_img);
+                // 추천학과 1~3개 추천하는 부분
+                $('#quick_1').text(depart_data[mbti][1]);
+                $('#quick_2').text(depart_data[mbti][2]);
+                $('#quick_3').text(depart_data[mbti][3]);
+                // 추천 학과의 설명을 변경 하는 부분
+                $('.info_1').html(depart_data[mbti]["info_1"]);
+                $('.info_2').html(depart_data[mbti]["info_2"]);
+                $('.info_3').html(depart_data[mbti]["info_3"]);
+                // 성격에 맞는 키워드 설정하는 부분
+                $('.result_sub_title').text(mbti_data[mbti]["keyword"]);
+                $('.choice').text(mbti_data[mbti]["job"]);
+            }
+        var question={
+            1:{"quest":"어색어색한 친구와의 조별 활동!! 나의 심리상태는?","type":"EI","A":"오~ 이번 기회에 친해져야겠다","B":"헉...큰일 났다 어떡하지....?"},
+            2:{"quest":"닭이 먼저일까? 계란이 먼저일까?","type":"SN","A":"계란이 먼저지...","B":"아니 당연히 닭이 먼저아님?"},
+            3:{"quest":"친구가 중요한 시험을 못봤다고 슬퍼하고 있다. 나는 뭐라고 말할까?","type":"TF","A":"정말? 몇 점인데 그래?","B":"괜찮아 다음에 잘 보면 되지 뭐	"},
+            4:{"quest":"친구가 우리 집에놀러 오기로 했는데 집이 아주 더러워 보인다. 나의 행동은?","type":"JP","A":"일단 청소기로 밀고 물걸레질하고 이불 정리해야지~","B":"일단 더러워 보이는 거 치웠으니까 이정도면 되겠지?	"},
+            5:{"quest":"조별활동중 조원들과의 의견이 나랑 안 맞는 거 같다... 나는 어떻게 할까?","type":"EI","A":"내 생각은 조금 다른데 혹시 이렇게 하는 건 어떨까?","B":"내 생각은 무슨.... 조용히 있어야지..."},
+            6:{"quest":"친구랑 영화를 보고 나서 친구가 영화가 어땠는지 묻는다. 나의 대답은?","type":"SN","A":"(영화 장면 장면마다 상세하게 설명하며) 이런 장면들이 재밌었어!	","B":"(전체적인 영화 분위기를 설명하며) 전체적으로 재밌었어!	"},
+            7:{"quest":"선생님 말씀이 이해가 안 돼! 그런데 이 부분이 시험에 나온다는데 어떡하지?","type":"TF","A":"이해 안되더라도 일단 외우자!	","B":"아니 이해가 되지 않는데 외우는게 무슨 소용이야?"},
+            8:{"quest":"수능이 끝나고 친구들과 여행을 떠나기로 했다. 계획은 어떻게 짤까?","type":"JP","A":"숙소 근처 맛집까지 알아보고 동선에 맞게 계획을 짠다.","B":"숙소만 알아보고 맛집은 그날에 먹고 싶은 거에 맡긴다	"},
+            9:{"quest":"갑자기 친구가 대뜸 나한테 화를 낸다 이때 나의 반응은?","type":"EI","A":"갑자기 쟤가 왜 저러지...? 왜 화났는지 물어본다","B":"어? 갑자기 화를 낸다고...? 무엇 때문에 화났는지 곰곰이 생각해본다 	"},
+            10:{"quest":"모르는 사람이 길을 물어본다. 나는 어떻게 알려줄까?","type":"SN","A":"상세히 어디 위치에 있는지 알려준다.	","B":"짧게, 간단하게 큰 건물 위주로 설명한다.	"},
+            11:{"quest":"성적표를 받은 날! 부모님께 듣고 싶은 칭찬은?","type":"TF","A":"잘했네~ 다음 시험도 열심히 하자!","B":"정말 열심히 했구나~! 고생했어~"},
+            12:{"quest":"선생님이 숙제를 내주셨다. 언제하는 게 좋을까?","type":"JP","A":"여유롭게 제출하기 위해서는 미리 하는 게 낫겠지? 좋아 그럼 이날에 하자!","B":"일단 나중에 생각하고 오늘 저녁 뭐 먹지...?"}
+        }
+        var mbti_data={
+                "INTJ":{"img":"../img/INTJ.png","keyword":"테스트1","job":"테스트1"},
+                "INTP":{"img":"../img/INTP.png","keyword":"테스트2","job":"테스트1"},
+                "ENTJ":{"img":"../img/ENTJ.png","keyword":"테스트3","job":"테스트1"},
+                "ENTP":{"img":"../img/ENTP.png","keyword":"테스트4","job":"테스트1"},
+
+                "INFJ":{"img":"../img/INFJ.png","keyword":"테스트5","job":"테스트1"},
+                "INFP":{"img":"../img/INFP.png","keyword":"테스트6","job":"테스트1"},
+                "ENFJ":{"img":"../img/ENFJ.png","keyword":"테스트7","job":"테스트1"},
+                "ENFP":{"img":"../img/ENFP.png","keyword":"테스트8","job":"테스트1"},
+
+                "ISTJ":{"img":"../img/ISTJ.png","keyword":"테스트9","job":"테스트1"},
+                "ISFJ":{"img":"../img/ISFJ.png","keyword":"테스트10","job":"테스트1"},
+                "ESTJ":{"img":"../img/ESTJ.png","keyword":"테스트11","job":"테스트1"},
+                "ESFJ":{"img":"../img/ESFJ.png","keyword":"테스트12","job":"테스트1"},
+
+                "ISTP":{"img":"../img/ISTP.png","keyword":"테스트13","job":"테스트1"},
+                "ISFP":{"img":"../img/ISFP.png","keyword":"테스트14","job":"테스트1"},
+                "ESTP":{"img":"../img/ESTP.png","keyword":"테스트15","job":"테스트1"},
+                "ESFP":{"img":"../img/ESFP.png","keyword":"테스트16","job":"테스트1"},
+        }
+        var depart_data={
+            //info_n 양식 h1태그 안에는 학과를 소개하는 슬로건,비전,소개 문구등이 들어감 + p태그 안에는 학과 에서 배우는 기술이나 미래전망에대하여 서술하는 영역  
+            // 소개할 학과가 3개 미만의 경우에는 칸은 놔두고 공백으로 한다
+            "INTJ":{1:"1",1:"2",1:"3","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "INTP":{1:"4",2:"5",3:"6","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "ENTJ":{1:"7",2:"8",3:"9","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "ENTP":{1:"10",2:"11",3:"","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+
+            "INFJ":{1:"1",2:"2",3:"3","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "INFP":{1:"4",2:"5",3:"6","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "ENFJ":{1:"7",2:"8",3:"9","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "ENFP":{1:"10",2:"11",3:"","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+
+            "ISTJ":{1:"1",2:"2",3:"3","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "ISFJ":{1:"4",2:"5",3:"6","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "ESTJ":{1:"7",2:"8",3:"","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":""},
+            "ESFJ":{1:"10",2:"11",3:"","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+
+            "ISTP":{1:"1",2:"2",3:"3","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "ISFP":{1:"4",2:"5",3:"6","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "ESTP":{1:"7",2:"8",3:"9","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+            "ESFP":{1:"10",2:"11",3:"","info_1":"<h1></h1><p></p>","info_2":"<h1></h1><p></p>","info_3":"<h1></h1><p></p>"},
+        }
     </script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6103be27f6871455"></script>
 </body>
 </html>
